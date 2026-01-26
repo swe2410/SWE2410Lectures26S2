@@ -6,7 +6,7 @@
  * Created: 1/23/2026
  */
 
-package strategy.marker;
+package week2.strategy.prep.marker;
 
 public class Marker {
     private static final String RESET = "\u001B[0m";

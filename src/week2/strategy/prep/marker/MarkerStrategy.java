@@ -6,7 +6,7 @@
  * Created: 1/23/2026
  */
 
-package strategy.marker;
+package week2.strategy.prep.marker;
 
 import java.util.Scanner;
 
