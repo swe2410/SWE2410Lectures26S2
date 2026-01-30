@@ -1,0 +1,35 @@
+package week2.strategy.lecture.ducksim3b;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class DuckSimulator {
+    public static void main(String[] args) {
+        List<Duck> duckList = new ArrayList<>();
+        duckList.add(new MallardDuck(new Quack()));
+        duckList.add(new RubberDuck(new Squeak()));
+        duckList.add(new DecoyDuck(new Quack()));
+        duckList.add(new DecoyDuck(new Squeak()));
+
+        for(Duck d: duckList){
+            d.display();
+            d.quack();
+            d.swim();
+            System.out.println();
+        }
+
+//        Duck mallardDuck = new MallardDuck();
+//        Duck redheadDuck = new RubberDuck();
+//        Duck rubberDuck = new RedHeadDuck();
+
+//        mallardDuck.display();
+//        mallardDuck.quack();
+//        mallardDuck.swim();
+//
+//        rubberDuck.display();
+//        rubberDuck.quack();
+//        rubberDuck.swim();
+
+
+    }
+}
