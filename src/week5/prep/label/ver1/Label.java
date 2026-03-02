@@ -9,7 +9,7 @@
 package week5.prep.label.ver1;
 
 public abstract class Label {
-    public String text;
+    private String text;
     public String getText() {
         return text;
     }

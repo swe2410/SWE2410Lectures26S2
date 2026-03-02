@@ -11,6 +11,7 @@ package week5.prep.quizexample;
 import java.util.Random;
 
 public interface Weapon {
-    public final Random NUMBER_GENERATOR = new Random();
+    public final Random NUMBER_GENERATOR =
+            new Random();
     public String getDmg();
 }

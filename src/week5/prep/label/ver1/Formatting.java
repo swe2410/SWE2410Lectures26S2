@@ -17,4 +17,9 @@ public abstract class Formatting extends Label {
     public String getType() {
         return label.getType();
     }
+
+    @Override
+    public String getText() {
+        return label.getText();
+    }
 }

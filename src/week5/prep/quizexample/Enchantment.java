@@ -8,10 +8,10 @@
 
 package week5.prep.quizexample;
 
-public abstract class Enchantment implements Weapon {
+public abstract class Enchantment
+        implements Weapon {
     protected Weapon weapon;
     public Enchantment(Weapon weapon){
         this.weapon = weapon;
     }
-
 }

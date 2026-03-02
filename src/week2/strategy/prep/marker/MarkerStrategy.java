@@ -13,14 +13,23 @@ import java.util.Scanner;
 public class MarkerStrategy {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-
-        System.out.print("What color do you want to print text in (red, green, blue)? ");
+        Marker marker = new Marker();
+        System.out.print("What color do you want to print " +
+                "text in (red, green, blue)? ");
         String color = scanner.nextLine();
-
-        Marker marker = new Marker(color);
-
+        switch (color) {
+            case "red":
+                marker.setColor(Marker.RED);
+                break;
+            case "blue":
+                marker.setColor(Marker.BLUE);
+                break;
+            case "green":
+                marker.setColor(Marker.GREEN);
+                break;
+            default:
+                System.out.println("Invalid color");
+        }
         System.out.println(marker.formatText("Hello, world!"));
-
-        scanner.close();
     }
 }

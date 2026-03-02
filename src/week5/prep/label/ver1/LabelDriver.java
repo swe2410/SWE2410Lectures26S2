@@ -12,11 +12,16 @@ public class LabelDriver {
     public static void main(String[] args) {
         Label label1 = new PlainLabel();
         label1.setText("Hello World!");
-        System.out.println(label1.text);
+        System.out.println(label1.getText());
+
         label1 = new Quotes(label1);
-        //Print out Hello World!???
-        System.out.println(label1.text);
-        System.out.println(((Quotes)label1).label.text);
+        System.out.println(label1.getText());
+        System.out.println(label1.render());
+////
+//
+//        //Print out Hello World!???
+//        System.out.println(label1.text);
+//        System.out.println(((Quotes)label1).label.text);
 
 
 

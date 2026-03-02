@@ -9,13 +9,16 @@
 package week2.strategy.prep.marker;
 
 public class Marker {
-    private static final String RESET = "\u001B[0m";
-    private static final String RED   = "\u001B[31m";
-    private static final String GREEN = "\u001B[32m";
-    private static final String BLUE  = "\u001B[34m";
-    private final String color;
-    public Marker(String color) {
-        this.color = color.toLowerCase();
+    public static final String RESET = "\u001B[0m";
+    public static final String RED   = "\u001B[31m";
+    public static final String GREEN = "\u001B[32m";
+    public static final String BLUE  = "\u001B[34m";
+    private String color;
+    public Marker() {
+        this.color = RESET;
+    }
+    public void setColor(String color) {
+        this.color = color;
     }
     public String formatText(String text) {
         switch (color) {

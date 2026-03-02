@@ -12,7 +12,6 @@ public class IceEnchantment extends Enchantment {
     public IceEnchantment(Weapon weapon) {
         super(weapon);
     }
-
     @Override
     public String getDmg() {
         final int baseDamage = 6;

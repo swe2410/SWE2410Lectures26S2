@@ -34,8 +34,11 @@ public class Driver1 {
             System.out.printf("Area = %.2f%n", area);
 
             //save
-            try (OutputStream out = Files.newOutputStream(filePath);
-                 PrintWriter printWriter = new PrintWriter(out)) {
+            try {
+                OutputStream out =
+                        Files.newOutputStream(filePath);
+                 PrintWriter printWriter =
+                         new PrintWriter(out);
                 printWriter.println("Area: " + area + "\n");
             } catch (IOException e) {
                 System.out.println(e.getMessage());
