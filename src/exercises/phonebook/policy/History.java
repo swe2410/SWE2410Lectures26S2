@@ -1,0 +1,47 @@
+package exercises.phonebook.policy;//package pbook;
+
+import java.util.Stack;
+
+public class History {
+   // done_cmds:   those commands that are currently executed
+   // undone_cmds: commands which were undone
+   protected Stack<Command> done_cmds = new Stack<>(), undone_cmds = new Stack<>();
+
+   // returns null if no command to undo, the command otherwise
+   public Command nextToUndo() {
+      if (done_cmds.isEmpty())
+         return null;
+      else
+         return done_cmds.peek();
+   }
+
+   // returns null if no command to redo, the command otherwise
+   public Command nextToRedo() {
+      if (undone_cmds.isEmpty())
+         return null;
+      else
+         return undone_cmds.peek();
+   }
+
+   // execute command and store it on the done commands list;
+   //   old undone commands are permanently deleted
+   public void doCommand(Command new_cmd) {
+      new_cmd.execute();
+      undone_cmds.clear();
+      done_cmds.push(new_cmd);
+   }
+
+   // undoes last executed command; precondition: at least one command to undo
+   public void undo() {
+      Command to_undo = done_cmds.pop();
+      to_undo.unexecute();
+      undone_cmds.push(to_undo);
+   }
+
+   // redoes last undone command; precondition: at least one command to redo
+   public void redo() {
+      Command todo = undone_cmds.pop();
+      todo.execute();
+      done_cmds.push(todo);
+   }
+}

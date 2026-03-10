@@ -12,9 +12,10 @@ public class TrainStation {
 
     public static void main(String[] args) {
         Train train = new Train();
-        ArrivalBoard arrivalBoard = new ArrivalBoard();
-        PlatformIndicator platformIndicator = new PlatformIndicator();
-
+        ArrivalBoard arrivalBoard =
+                new ArrivalBoard();
+        PlatformIndicator platformIndicator =
+                new PlatformIndicator();
         arrivalBoard.postArrival(
                 train.getTrainId(),
                 train.getSourceLocation()
